@@ -1,0 +1,118 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+    font-family: Arial;
+    margin: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+
+/* Header/logo Title */
+.header {
+	background-image:url(img/ready/background_image.jpg) ;
+	background-size:  cover;
+	background-repeat: no-repeat;
+    padding: 60px;
+    text-align: RIGHT;
+    /*background: #1abc9c;*/
+     color: rgba(0, 0, 0, 0.3);
+    letter-spacing: 3px;
+	-webkit-text-stroke-width: 0.15px;
+	-webkit-text-stroke-color: black;
+    line-height: 50%;
+	
+}
+
+/* Style the top navigation bar */
+.navbar {
+    display: flex;
+    background-color: #8B4B21;
+}
+
+.navbar_sticky {
+    display: flex;
+	width: 100%;
+    background-color: #8B4B21;
+	position:fixed;
+	left: 0;
+	top: 0;
+	z-index: 100;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Column container */
+.row {  
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+
+/* Main column */
+.main {
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of n@media (max-width: 700px) {
+    .row, .navbar {   
+        flex-direction: column;
+    }
+}ext to each other */
+@media (max-width: 700px) {
+    .row, .navbar {   
+        flex-direction: column;
+    }
+	.header {
+		background-image:url(img/ready/background_image.jpg) ;
+		background-size:  cover;
+		background-repeat: no-repeat;
+		padding: 60px;
+		text-align: RIGHT;
+		/*background: #1abc9c;*/
+		color: rgba(0, 0, 0, 0.9);
+		letter-spacing: 1.5px;
+		-webkit-text-stroke-width: 0.15px;
+		-webkit-text-stroke-color: white;
+		line-height: 40%;
+	
+}
+}

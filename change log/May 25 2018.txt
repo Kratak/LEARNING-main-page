@@ -1,0 +1,4 @@
+more separete folders
+change log created
+jquerry suport
+sticky bar for main page
