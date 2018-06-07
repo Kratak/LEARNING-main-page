@@ -1,27 +1,39 @@
-﻿// alert("Hello! I am an alert box!!");
+﻿// NOTE bracket "TODO, NOTE, FIXME, CHANGES i FUTURE."
+// TODO  [2]solve a problem with errors in bracklets
+/* TODO: [1] remeka link/href from locals to webs 
+    <a href="index.html">Home</a>
+    to 
+    http://kratak.pl/index.html  */
+// alert("Hello! I am an alert box!!");
 document.getElementById("p1").innerHTML =
-	"Margaryna z jsa która działa, z polskimi znakami :3";	
-	/*sticky*/
-$(document).ready(function() 
-	{
-		var NavY = $('.navbar').offset().top;		  
-		var stickyNav = function()
-		{
-			var ScrollY = $(window).scrollTop();	   
-			if (ScrollY > NavY) 
-			{$('.navbar').addClass('navbar_sticky');} 
-			else 
-			{$('.navbar').removeClass('navbar_sticky'); }
-		};
-		stickyNav();	  
-		$(window).scroll(function() {stickyNav();});
-	}); 
+	"Margaryna z jsa która działa, z polskimi znakami :3";
+/*sticky*/
+$(document).ready(function () {
+	var NavY = $('.navbar').offset().top;
+	var stickyNav = function () {
+		var ScrollY = $(window).scrollTop();
+		if (ScrollY > NavY) {
+			$('.navbar').addClass('navbar_sticky');
+		} else {
+			$('.navbar').removeClass('navbar_sticky');
+		}
+	};
+	stickyNav();
+	$(window).scroll(function () {
+		stickyNav();
+	});
+});
 
-	/*changelog*/
+/*changelog*/
 var text1 = /clearing on index.html jscripts conect alert(); for "<changelog>" /;
 var x2x = document.getElementById('x2x');
-x2x.addEventListener("click", function(){ aler_changelog(); });
-function aler_changelog(){alert(text1);}
+x2x.addEventListener("click", function () {
+	aler_changelog();
+});
+
+function aler_changelog() {
+	alert(text1);
+}
 
 
 
@@ -50,4 +62,3 @@ function aler_changelog(){alert(text1);}
       console.log(`First line : ${lines[0]}`)
 
 });*/
-
