@@ -5,6 +5,10 @@
     to 
     http://kratak.pl/index.html  */
 
+/* NOTE [!] use Xrem's [x=number ex. 3rem;]
+html = 10 px;
+heder = 3 rem(= 3x10px);*/
+
 * {
 	box-sizing: border-box;
 }
@@ -66,6 +70,10 @@ html.jpg css.jpg js.jpg or .png or .svg*/
 	text-align: center;
 }
 
+#hamburger {
+	display: none;
+}
+
 /* Change color on hover */
 
 .navbar a:hover {
@@ -122,6 +130,30 @@ html.jpg css.jpg js.jpg or .png or .svg*/
     }
 }ext to each other */
 
+#myBtn {
+	display: none;
+	position: fixed;
+	bottom: 10px;
+	right: 5px;
+	font-size: 31px;
+	border: none;
+	outline: none;
+	background-color: dimgrey;
+	color: black;
+	cursor: pointer;
+	border-radius: 4px;
+	width: 35px;
+	height: 35px;
+	opacity: 0.8;
+	text-align: center;
+
+}
+
+#myBtn:hover {
+	background-color: #555;
+	opacity: 90%;
+}
+
 @media (max-width: 700px) {
 	.row,
 	.navbar {
@@ -141,4 +173,24 @@ html.jpg css.jpg js.jpg or .png or .svg*/
 		line-height: 40%;
 
 	}
+
+	/*	//TODO [3] start to make hamburger button
+	remeber display none or block*/
+	#hamburger {
+		display: none;
+		position: fixed;
+		top: 10px;
+		right: 10px;
+		font-size: 25px;
+		border: none;
+		outline: none;
+		background-color: transparent;
+		color: black;
+		cursor: pointer;
+		border-radius: 4px;
+		width: 35px;
+		text-align: center;
+		z-index: 200;
+	}
+
 }

@@ -25,7 +25,7 @@ $(document).ready(function () {
 });
 
 /*changelog*/
-var text1 = /clearing on index.html jscripts conect alert(); for "<changelog>" /;
+var text1 = "text";
 var x2x = document.getElementById('x2x');
 x2x.addEventListener("click", function () {
 	aler_changelog();
@@ -36,8 +36,26 @@ function aler_changelog() {
 }
 
 
+window.onscroll = function () {
+	scrollFunction()
+};
 
+function scrollFunction() {
+	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		document.getElementById("myBtn").style.display = "block";
+	} else {
+		document.getElementById("myBtn").style.display = "none";
+	}
+}
 
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+	document.body.scrollTop = 0;
+	document.documentElement.scrollTop = 0;
+}
+
+/*//TODO [3] start to make hamburger button
+	remeber display none or block*/
 /* <div id="demo">
 <button type="button" onclick="loadXMLDoc()">Change Content</button>
 </div> */
