@@ -6,7 +6,7 @@
     http://kratak.pl/index.html  */
 // alert("Hello! I am an alert box!!");
 document.getElementById("p1").innerHTML =
-	"Margaryna z jsa która działa, z polskimi znakami :3";
+	"Made by Maciej Kaczanowski";
 /*sticky*/
 $(document).ready(function () {
 	var NavY = $('.navbar').offset().top;
@@ -42,9 +42,9 @@ window.onscroll = function () {
 
 function scrollFunction() {
 	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-		document.getElementById("myBtn").style.display = "block";
+		document.getElementById("to_top_button").style.display = "block";
 	} else {
-		document.getElementById("myBtn").style.display = "none";
+		document.getElementById("to_top_button").style.display = "none";
 	}
 }
 
