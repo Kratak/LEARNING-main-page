@@ -57,7 +57,7 @@ html.jpg css.jpg js.jpg or .png or .svg*/
 
 /* Header/logo Title */
 
-.header {
+HEADER {
 	background-image: url(img/ready/background_image.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -85,7 +85,7 @@ html.jpg css.jpg js.jpg or .png or .svg*/
 	position: fixed;
 	left: 0;
 	top: 0;
-	z-index: 100;
+	z-index: 2;
 }
 
 /* Style the navigation bar links */
@@ -147,7 +147,7 @@ html.jpg css.jpg js.jpg or .png or .svg*/
 
 /* Footer */
 
-.footer {
+footer {
 	padding: 20px;
 	text-align: center;
 	background: #ddd;
@@ -203,11 +203,11 @@ html.jpg css.jpg js.jpg or .png or .svg*/
 		flex-direction: column;
 	}
 	/*	completly different size on mobiles*/
-	.header {
+	header {
 		background-image: url(img/ready/background_image.jpg);
 		background-size: cover;
 		background-repeat: no-repeat;
-		padding: 60px;
+		padding: 60px 30px 60px 60px;
 		text-align: RIGHT;
 		/*background: #1abc9c;*/
 		color: rgba(0, 0, 0, 0.9);
@@ -243,3 +243,4 @@ html.jpg css.jpg js.jpg or .png or .svg*/
 		text-align: center;
 		font-size: 1.2rem;
 	}
+}

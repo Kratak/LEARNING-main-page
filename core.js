@@ -4,9 +4,15 @@
     <a href="index.html">Home</a>
     to 
     http://kratak.pl/index.html  */
-// alert("Hello! I am an alert box!!");
-document.getElementById("p1").innerHTML =
-	"Made by Maciej Kaczanowski";
+
+/* footer message*/
+
+var github = '<a href="https://github.com/Kratak" target="_blank">&lt; github &gt;</a>';
+var linkedin = '<a href="https://www.linkedin.com/in/maciej-kaczanowski-189404166/" target="_blank">&lt; linkedin &gt;</a>';
+
+document.getElementById("fotIn").innerHTML =
+	"made by Maciej Kaczanowski " + "</br>" + github + " " + linkedin;
+
 /*sticky*/
 $(document).ready(function () {
 	var NavY = $('.navbar').offset().top;
@@ -24,59 +30,46 @@ $(document).ready(function () {
 	});
 });
 
-/*changelog*/
-var text1 = "text";
-var x2x = document.getElementById('x2x');
-x2x.addEventListener("click", function () {
-	aler_changelog();
-});
 
-function aler_changelog() {
-	alert(text1);
-}
+/*very smode scroll, to eny elemnt on page*/
 
+/*https://css-tricks.com/snippets/jquery/smooth-scrolling/*/
 
-window.onscroll = function () {
-	scrollFunction()
-};
-
-function scrollFunction() {
-	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-		document.getElementById("to_top_button").style.display = "block";
-	} else {
-		document.getElementById("to_top_button").style.display = "none";
-	}
-}
-
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-	document.body.scrollTop = 0;
-	document.documentElement.scrollTop = 0;
-}
+// Select all links with hashes
+$('a[href*="#"]')
+	// Remove links that don't actually link to anything
+	.not('[href="#"]')
+	.not('[href="#0"]')
+	.click(function (event) {
+		// On-page links
+		if (
+			location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
+			location.hostname == this.hostname
+		) {
+			// Figure out element to scroll to
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+			// Does a scroll target exist?
+			if (target.length) {
+				// Only prevent default if animation is actually gonna happen
+				event.preventDefault();
+				$('html, body').animate({
+					scrollTop: target.offset().top
+				}, 1000, function () {
+					// Callback after animation
+					// Must change focus!
+					var $target = $(target);
+					$target.focus();
+					if ($target.is(":focus")) { // Checking if the target was focused
+						return false;
+					} else {
+						$target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+						$target.focus(); // Set focus again
+					};
+				});
+			}
+		}
+	});
 
 /*//TODO [3] start to make hamburger button
 	remeber display none or block*/
-/* <div id="demo">
-<button type="button" onclick="loadXMLDoc()">Change Content</button>
-</div> */
-/*function loadXMLDoc() 
-	{
-	var xhttp = new XMLHttpRequest();
-	xhttp.onreadystatechange = function() 
-	{
-		if (this.readyState == 4 && this.status == 200) 
-		{document.getElementById("demo").innerHTML =
-		this.responseText;}
-	};
-	xhttp.open("GET", "change log/text.txt", true);
-	xhttp.open("GET", "change log/May 31 2018.txt", true);
-	xhttp.send();
-	}
-*/
-/*$.get('/Changelong/May 31 2018.txt',{},function(content){
-      let lines=content.split('\n');
-
-       console.log(`"May 31 2018.txt" contains ${lines.length} lines`)
-      console.log(`First line : ${lines[0]}`)
-
-});*/
