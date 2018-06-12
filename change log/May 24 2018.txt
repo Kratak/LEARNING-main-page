@@ -1,3 +1,0 @@
-add separate folder form img and other html
-relink for other folder ../
-add .js file

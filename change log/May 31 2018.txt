@@ -1,4 +1,0 @@
-suport for favicon .ico
-live on kratak.pl
-ftp conect
-suport for og:image prefix="og: http://ogp.me/ns#"

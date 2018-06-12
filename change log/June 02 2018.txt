@@ -1,2 +1,0 @@
-strugle with <changelog> part1
-probably I'll finish with var test = getElementByID(.txt){};
