@@ -13,6 +13,9 @@
 html = 10 px;
 heder = 3 rem(= 3x10px);*/
 
+/*//TODO [1.1] check reset.css, 
+and change *{} looks better */
+
 * {
 	box-sizing: border-box;
 }
@@ -196,7 +199,11 @@ footer {
 	body {
 		font-size: 1.4rem;
 	}
+
+	/*	//TODO [4] solve rov vh in js
+	related to sticky nav*/
 	.row {
+		margin-top: 25vh;
 		flex-direction: column;
 	}
 	.navbar {
