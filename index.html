@@ -17,6 +17,7 @@
 shoud be before main style.css -->
 	<!--	<link rel="stylesheet" href="reset.css" type="text/css" />-->
 	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link rel="stylesheet" href="func/preloader/css_preloader.css">
 	<link rel="shortcut icon" href="img/ready/favicon.ico" type="image/x-icon">
 	<!-- https://www.freefavicon.com -->
 	<link href="https://fonts.googleapis.com/css?family=Lato:700|Lobster|Open+Sans" rel="stylesheet">
@@ -32,6 +33,17 @@ shoud be before main style.css -->
 <!--NOTE start to use skeleton-->
 
 <body>
+	<!--preloader
+you can cange this progres logo before upload of page
+func/preloader etc-->
+	<div id="preloader">
+		<img src="func/preloader/dots.gif" alt="some awsome gif">
+		<!--
+		<div class="dot"></div>
+		<div class="dot"></div>
+		<div class="dot"></div>
+-->
+	</div>
 	<!-- TODO: [1] remeka link/href from locals to webs 
     <a href="index.html">Home</a>
     to 
@@ -61,7 +73,7 @@ shoud be before main style.css -->
 		<div class="side">
 			<h2>About my work</h2>
 			<h5>Photo of me:</h5>
-			<div class="fakeimg" style="height:200px;">Image</div>
+			<div class="fakeimg" style="height:200px;"><a href="http://lorempixel.com/">IMG</a></div>
 			<p>Some text about me in culpa qui officia deserunt mollit anim..</p>
 			<h3>More Text</h3>
 			<p>Lorem ipsum dolor sit ame.</p>
@@ -74,13 +86,14 @@ shoud be before main style.css -->
 		<div class="main">
 			<h2>TITLE HEADING</h2>
 			<h5>Title description, Dec 7, 2017</h5>
-			<div class="fakeimg" style="height:200px;">Image</div>
+			<div class="fakeimg" style="height:200px;"> img </div>
+			<!--			<img src="http://lorempixel.com/200/200/sports/1">-->
 			<p>Some text..</p>
 			<p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
 			<br>
 			<h2>TITLE HEADING</h2>
 			<h5>Title description, Sep 2, 2017</h5>
-			<div class="fakeimg" style="height:200px;">Image</div>
+			<div class="fakeimg" style="height:200px;">img</div>
 			<p>Some text..</p>
 			<p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
 		</div>
@@ -99,6 +112,7 @@ shoud be before main style.css -->
 		<p id="fotIn"></p>
 
 	</footer>
+	<script src="func/preloader/js_preloader.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="core.js"></script>
 
